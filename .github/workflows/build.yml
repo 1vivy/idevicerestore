@@ -280,7 +280,7 @@ jobs:
       run: |
           mkdir -p dest
           DESTDIR=`pwd`/dest make install
-          tar -C dest -cf idevicerestore.tar ${{ env.dest }}
+          tar -C dest -cf idevicerestore.tar /
     - name: publish artifact
       uses: actions/upload-artifact@v2
       with:
